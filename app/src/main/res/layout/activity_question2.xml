@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ticket Booking System"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Full Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Full Name:"
+            android:textStyle="bold"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etFullName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Enter full name"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="15sp"/>
+
+        <!-- Phone Number -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number:"
+            android:textStyle="bold"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Enter phone number"
+            android:inputType="phone"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="15sp"/>
+
+        <!-- Ticket Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ticket Type:"
+            android:textStyle="bold"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+        <RadioGroup
+            android:id="@+id/rgTicketType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+            <RadioButton
+                android:id="@+id/rbFirstClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Class (1,500K)"
+                android:checked="true"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/rbBusinessClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Business Class (1,300K)"
+                android:textSize="15sp"/>
+            <RadioButton
+                android:id="@+id/rbEconomyClass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Economy Class (1,000K)"
+                android:textSize="15sp"/>
+        </RadioGroup>
+
+        <!-- Number of tickets -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Number of Tickets:"
+            android:textStyle="bold"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etNumTickets"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Enter number of tickets"
+            android:inputType="number"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="15sp"/>
+
+        <!-- Discount (%) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Discount (%):"
+            android:textStyle="bold"
+            android:textColor="#555555"
+            android:layout_marginBottom="4dp"/>
+        <EditText
+            android:id="@+id/etDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Enter discount percentage (e.g. 10)"
+            android:inputType="numberDecimal"
+            android:paddingHorizontal="12dp"
+            android:layout_marginBottom="24dp"
+            android:textSize="15sp"/>
+
+        <!-- Book Ticket Button -->
+        <Button
+            android:id="@+id/btnBookTicket"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Book Ticket"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            app:cornerRadius="8dp"
+            android:layout_marginBottom="24dp"
+            android:textAllCaps="false"/>
+
+        <!-- Booking Results Container -->
+        <LinearLayout
+            android:id="@+id/layoutResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Booking Confirmation"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#4CAF50"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:id="@+id/tvResultName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Full Name: "
+                android:textSize="15sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvResultPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone Number: "
+                android:textSize="15sp"
+                android:textColor="#333333"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/tvResultAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount: "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#E91E63"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate your booking experience (5 stars gets an additional 5% off!):"
+                android:textSize="13sp"
+                android:textColor="#777777"
+                android:layout_marginBottom="6dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:rating="0"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

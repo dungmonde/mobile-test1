@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_horizontal">
+
+        <!-- Illustration Placeholder -->
+        <ImageView
+            android:id="@+id/ivIllustration"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            android:src="@drawable/ic_launcher_foreground"
+            android:background="#F8F9FA"
+            android:contentDescription="Illustration"
+            android:scaleType="centerInside" />
+
+        <!-- Nama Lengkap Input -->
+        <EditText
+            android:id="@+id/etNamaLengkap"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Nama Lengkap"
+            android:inputType="textPersonName"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="16sp" />
+
+        <!-- Email Input -->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="16sp" />
+
+        <!-- Nomor HP Input -->
+        <EditText
+            android:id="@+id/etNomorHP"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Nomor HP"
+            android:inputType="phone"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="16sp" />
+
+        <!-- Password Input -->
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="16sp" />
+
+        <!-- Konfirmasi Password Input -->
+        <EditText
+            android:id="@+id/etKonfirmasiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="32dp"
+            android:background="@drawable/bg_edit_text"
+            android:hint="Konfirmasi Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="16dp"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="16sp" />
+
+        <!-- Mendaftar Button -->
+        <Button
+            android:id="@+id/btnMendaftar"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:backgroundTint="#3A9AD9"
+            android:text="Mendaftar"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="12dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>
